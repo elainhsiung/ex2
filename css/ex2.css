@@ -38,15 +38,18 @@ header{
 
 /*logo*/
 .logo{
-    float: left;
-    width: 120px;
+    position: absolute;   /* 絕對定位 */
+    top: 0;               /* 貼齊最上方 */
+    left: 0;              /* 貼齊最左邊！ */
+    width: 100px;
     background: rgba(255, 255, 255, 1);
+    z-index: 100;
 }
 
 .logo img{
-    width: 100%;
+    width: 80%;
     display: block;
-    margin: auto;
+    margin:0 auto;
 }
 
 /*nav*/
