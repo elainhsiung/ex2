@@ -1,22 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap');
 
 body{
     padding: 0;
     margin: 0;
     font-size: 1.2rem;
 
-      font-family: "Outfit", sans-serif;/*設定字型*/
+    font-family: "Varela Round", sans-serif;/*設定字型*/
 }
 
-a{
+a{  /*選單*/
     text-decoration: none;
-    color: rgba(69, 9, 32, 1);
+    color: rgb(182, 40, 39);
     display: inline-block;
 }
 
 a:hover{
-    color: rgba(69, 9, 32, .5);
+    color: rgb(182, 40, 39,.5);
 }
 
 /*header*/ /*頁面上的白槓*/
@@ -64,30 +65,48 @@ nav a:hover{
 
 /*hero*/
 .hero{
+    
     position: relative;   
     width: 100%;
-    height: 650px;
+    height: 695px;
     overflow: hidden;
+    background-color: #142F99;
 }
 
 .hero img{
     width: 100%;
-    object-fit:cover;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;     /* 居中對齊 */
 }
 
-.hero h1{
+/* 3. 文字總容器：直接定位在圖片左側 */
+.hero-content {
     position: absolute;
-    top: 10%;
-    left: 10%;
-    font-size: 150px;
-    color: rgba(69, 9, 32, 1);
+    top: auto;
+    bottom: 10%;         
+    left: 8%;             /* 距離左邊 8%，可依需求左右微調 */
+    z-index: 10;          /* 強制浮在圖片最上層 */
+    pointer-events: none; /* 避免文字阻擋滑鼠點擊 */
+}
+.hero-content h1 {
+    font-size: 80px ;    
+    color: #ffffff;    
+    margin: 0 0 10px 0;   /* 消除預設邊距，底部留 10px 給英文 */
+    font-weight: regular;
+    line-height: 1;
+    font-family: "Yuji Mai", serif;
+    
 }
 
-.hero p{
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    color: rgba(69, 9, 32, 1);
+.hero-content p {
+    font-size: 16px;      /* 英文副標題字體 */
+    color: #ffffff;
+    margin: 0;
+    width: auto;     /* 限制英文字寬度避免太長 */
+    line-height: 1.4;
+    font-family: "Yuji Mai", serif;
 }
 
 /*section*/
@@ -99,7 +118,7 @@ section{
 }
 
 section h1{
-    color:rgba(69, 9, 32, 1);
+    color:rgb(182, 40, 39);
     text-align: center;
 }
 
